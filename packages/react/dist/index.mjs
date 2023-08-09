@@ -119,18 +119,30 @@ var {
 });
 
 // src/index.tsx
-import { jsx } from "react/jsx-runtime";
 var Button = styled("button", {
   fontFamily: "$default",
+  fontWeight: "bold",
   backgroundColor: "$ignite500",
-  borderRadius: "$md",
-  padding: "$4",
-  height: "$40",
-  width: "$40"
+  borderRadius: "$sm",
+  padding: "$2 $4",
+  color: "$white",
+  border: 0,
+  variants: {
+    size: {
+      small: {
+        fontSize: 14,
+        padding: "$2 $4"
+      },
+      big: {
+        fontSize: 16,
+        padding: "$3 $6"
+      }
+    }
+  },
+  defaultVariants: {
+    size: "small"
+  }
 });
-function app() {
-  return /* @__PURE__ */ jsx(Button, { children: "ol\xE1 mundo" });
-}
 export {
-  app
+  Button
 };

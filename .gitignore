@@ -1,5 +1,6 @@
 # dependencies
 /node_modules
+/packages/docs/node_modules
 
 # local env files
 .env*.local
