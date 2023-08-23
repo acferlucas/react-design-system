@@ -126,32 +126,6 @@ var Box = styled("div", {
   border: "1px solid $gray600"
 });
 
-// src/components/button.ts
-var Button = styled("button", {
-  fontFamily: "$default",
-  fontWeight: "bold",
-  backgroundColor: "$ignite500",
-  borderRadius: "$sm",
-  padding: "$2 $4",
-  color: "$white",
-  border: 0,
-  variants: {
-    size: {
-      small: {
-        fontSize: 14,
-        padding: "$2 $4"
-      },
-      big: {
-        fontSize: 16,
-        padding: "$3 $6"
-      }
-    }
-  },
-  defaultVariants: {
-    size: "small"
-  }
-});
-
 // src/components/Text.ts
 var Text = styled("p", {
   fontFamily: "$default",
@@ -176,8 +150,146 @@ var Text = styled("p", {
     }
   }
 });
+
+// src/components/Heading.ts
+var Heading = styled("h2", {
+  fontFamily: "$default",
+  lineHeight: "$shorter",
+  margin: 0,
+  color: "$gray100",
+  variants: {
+    size: {
+      sm: { fontFamily: "$xl" },
+      md: { fontFamily: "$2xl" },
+      lg: { fontFamily: "$4xl" },
+      "2xl": { fontFamily: "$5xl" },
+      "3xl": { fontFamily: "$6xl" },
+      "4xl": { fontFamily: "$7xl" },
+      "5xl": { fontFamily: "$8xl" },
+      "6xl": { fontFamily: "$9xl" }
+    }
+  },
+  defaultVariants: {
+    size: "md"
+  }
+});
+
+// src/components/Avatar/index.tsx
+import { User } from "phosphor-react";
+
+// src/components/Avatar/styles.ts
+import * as Avatar from "@radix-ui/react-avatar";
+var AvatarContainer = styled(Avatar.Root, {
+  borderRadius: "$full",
+  display: "inline-block",
+  width: "$12",
+  height: "$12",
+  overflow: "hidden"
+});
+var AvatarImage = styled(Avatar.Image, {
+  width: "100%",
+  height: "100%",
+  objectFit: "cover",
+  borderRadius: "inherit"
+});
+var AvatarFallback = styled(Avatar.Fallback, {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "$gray600",
+  color: "$gray800",
+  svg: {
+    width: "$6",
+    height: "$6"
+  }
+});
+
+// src/components/Avatar/index.tsx
+import { jsx, jsxs } from "react/jsx-runtime";
+function Avatar2(props) {
+  return /* @__PURE__ */ jsxs(AvatarContainer, { children: [
+    /* @__PURE__ */ jsx(AvatarImage, __spreadValues({}, props)),
+    /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
+  ] });
+}
+
+// src/components/Button.tsx
+var Button = styled("button", {
+  all: "unset",
+  borderRadius: "$sm",
+  fontSize: "$sm",
+  fontWeight: "$medium",
+  fontFamily: "$default",
+  textAlign: "center",
+  minWidth: 120,
+  boxSizing: "border-box",
+  padding: "0 $4",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: "$2",
+  cursor: "pointer",
+  svg: {
+    width: "$4",
+    height: "$4"
+  },
+  "&:disabled": {
+    cursor: "not-allowed"
+  },
+  variants: {
+    variant: {
+      primary: {
+        color: "$white",
+        background: "$ignite500",
+        "&:not(:disabled):hover": {
+          background: "$ignite300"
+        },
+        "&:disabled": {
+          backgroundColor: "$gray200"
+        }
+      },
+      secondary: {
+        color: "$ignite300",
+        border: "2px solid $ignite500",
+        "&:not(:disabled):hover": {
+          background: "$ignite500",
+          color: "$white"
+        },
+        "&:disabled": {
+          color: "$gray200",
+          borderColor: "$gray200"
+        }
+      },
+      tertiary: {
+        color: "$gray100",
+        "&:not(:disabled):hover": {
+          color: "$white"
+        },
+        "&:disabled": {
+          color: "$gray600"
+        }
+      }
+    },
+    size: {
+      sm: {
+        height: 38
+      },
+      md: {
+        height: 46
+      }
+    }
+  },
+  defaultVariants: {
+    variant: "primary",
+    size: "md"
+  }
+});
 export {
+  Avatar2 as Avatar,
   Box,
   Button,
+  Heading,
   Text
 };

@@ -23,7 +23,9 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.3",
     "@stitches/react": "^1.2.8",
+    "phosphor-react": "^1.4.1",
     "tsup": "^7.1.0"
   }
 }
