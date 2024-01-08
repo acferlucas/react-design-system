@@ -137,6 +137,7 @@ var Box = styled("div", {
   backgroundColor: "$gray800",
   border: "1px solid $gray600"
 });
+Box.displayName = "Box";
 
 // src/components/Text.ts
 var Text = styled("p", {
@@ -162,6 +163,7 @@ var Text = styled("p", {
     }
   }
 });
+Text.displayName = "Text";
 
 // src/components/Heading.ts
 var Heading = styled("h2", {
@@ -185,6 +187,7 @@ var Heading = styled("h2", {
     size: "md"
   }
 });
+Heading.displayName = "Heading";
 
 // src/components/Avatar/index.tsx
 import { User } from "phosphor-react";
@@ -226,6 +229,7 @@ function Avatar2(props) {
     /* @__PURE__ */ jsx(AvatarFallback, { delayMs: 600, children: /* @__PURE__ */ jsx(User, {}) })
   ] });
 }
+Avatar2.displayName = "Avatar";
 
 // src/components/Button.tsx
 var Button = styled("button", {
@@ -298,6 +302,7 @@ var Button = styled("button", {
     size: "md"
   }
 });
+Button.displayName = "Button";
 
 // src/components/TextInput/styles.ts
 var TextContainer = styled("div", {
@@ -350,6 +355,7 @@ function TextInput(_a) {
     /* @__PURE__ */ jsx2(Input, __spreadValues({}, rest))
   ] });
 }
+TextInput.displayName = "TextInput";
 
 // src/components/TextAreaInput.tsx
 var TextArea = styled("textarea", {
@@ -376,6 +382,7 @@ var TextArea = styled("textarea", {
     color: "$gray400"
   }
 });
+TextArea.displayName = "TextArea";
 
 // src/components/Checkbox/index.tsx
 import { CheckboxIndicator as CheckboxIndicator3 } from "@radix-ui/react-checkbox";
@@ -438,6 +445,7 @@ function CheckBox(_a) {
   var props = __objRest(_a, []);
   return /* @__PURE__ */ jsx3(CheckBoxContainer, __spreadProps(__spreadValues({}, props), { children: /* @__PURE__ */ jsx3(CheckboxIndicator3, { asChild: true, children: /* @__PURE__ */ jsx3(Check, { weight: "bold" }) }) }));
 }
+CheckBox.displayName = "CheckBox";
 
 // src/components/MultiStep/styles.ts
 var MultiStepContainer = styled("div", {});
@@ -479,6 +487,7 @@ function MultiStep({ size, currentStep = 1 }) {
     /* @__PURE__ */ jsx4(Steps, { css: { "--steps-size": size }, children: Array.from({ length: size }, (_, i) => i + 1).map((step) => /* @__PURE__ */ jsx4(Step, { active: currentStep >= step }, step)) })
   ] });
 }
+MultiStep.displayName = "MultiStep";
 export {
   Avatar2 as Avatar,
   Box,
