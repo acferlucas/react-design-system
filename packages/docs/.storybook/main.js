@@ -28,11 +28,12 @@ const config = {
   docs: {
     autodocs: "tag",
   },
-  async viteFinal(config, { configType }) {
+  viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
       config.base = '/react-design-system/'
     }
+
     return config
-  },
+  }
 };
 export default config;
