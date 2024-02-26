@@ -25,9 +25,6 @@ const config = {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
-  core: {
-    builder: getAbsolutePath("@storybook/builder-vite")
-  },
   docs: {
     autodocs: "tag",
   },
