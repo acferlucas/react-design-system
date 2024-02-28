@@ -1,5 +1,5 @@
 import { StoryObj, Meta } from '@storybook/react'
-import { Button, ButtonProps } from '@ignite-ui/react'
+import { Button, ButtonProps } from '@acfer-ignite-ui/react'
 import { Rocket } from 'phosphor-react'
 
 export default {

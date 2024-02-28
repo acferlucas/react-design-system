@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@acfer-ignite-ui/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -28,10 +28,10 @@
     "vite": "^4.4.8"
   },
   "Dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/ts-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
+    "@acfer-ignite-ui/eslint-config": "*",
+    "@acfer-ignite-ui/ts-config": "*",
+    "@acfer-ignite-ui/react": "*",
+    "@acfer-ignite-ui/tokens": "*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
